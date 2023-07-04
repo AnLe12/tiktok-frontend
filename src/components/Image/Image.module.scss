@@ -1,0 +1,20 @@
+.wrapper {
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 50%;
+  border-width: 0.5px;
+  border-color: rgba(22, 24, 35, 0.12);
+}
+.small{
+  height: 32px;
+  width: 32px;
+}
+.medium{
+  width: 54px;
+  height: 54px;
+}
+.large{
+  height: 116px;
+  width: 116px;
+}
+

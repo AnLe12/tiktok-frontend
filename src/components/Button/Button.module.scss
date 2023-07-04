@@ -1,0 +1,118 @@
+.wrapper{
+    // display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--white);
+    font-weight: 700;
+    .title{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &.disabled{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    &:hover {
+      background-color: rgba(22, 24, 35, .03);
+    }
+
+}
+
+// Distance between icon and title in buttons
+.icon + .title,
+.title + .icon{
+    margin-left: 4px;
+}
+
+.icon{
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+    line-height: 2.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transform: translateY(12%);
+}
+
+// Button types:
+.rounded {
+    border-radius: 999px;
+    border: 1px solid transparent;
+    border-color: rgba(22, 24, 35, 0.2);
+    color: rgba(22, 24, 35, 0.75);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 3px 10px;
+    &:hover {
+      background-color: currentColor;
+    }
+  }
+  
+  .primary {
+    color: var(--white);
+    border: 1px solid transparent;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    min-width: 100px;
+    padding: 4px 8px;
+
+    &:hover {
+      border-color: var(--primary);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+    }
+  }
+  
+  .outline {
+    color: var(--primary);
+    border: 1px solid transparent;
+    border-color: currentColor;
+    padding: 4px 8px;
+    &:hover {
+      background-color: rgba(254, 44, 85, 0.06);
+    }
+  }
+  
+  .text {
+    color: currentColor;
+    cursor: pointer;
+    width: fit-content;
+    // &:hover{
+    //   text-decoration: underline;
+    // }
+
+  }
+
+  .active{
+    color: var(--primary);
+  }
+  // button sizes
+  
+  .small {
+    min-width: 88px;
+    padding: 4px 16px;
+  }
+  
+  .large {
+    min-width: 140px;
+    min-height: 48px;
+    padding: 8px;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+
+  .userLinkBtn{
+    .wrapper{
+      padding: 0;
+    }
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  

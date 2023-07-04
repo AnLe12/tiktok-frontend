@@ -1,0 +1,279 @@
+.header{
+    position: relative;
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    max-width: 624px;
+    padding-right: 92px;
+    .userInfo{
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        .userAvatarContainer{
+            .userAvatar{}
+        }
+
+        .userTitleContainer{
+            flex: 1 1 0%;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            margin-left: 20px;
+            .userTitle{
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 38px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: left;
+                word-break: break-word;
+            }
+
+            .userSubtitle{
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;
+                text-overflow: ellipsis;
+                height: 25px;
+                overflow: hidden;
+                max-width: 450px;
+                white-space: nowrap;
+                display: flex;
+                align-items: flex-end;
+            }
+            .followBtn, .editProfileBtn{
+                height: 36px;
+                width: 208px;
+                margin: 16px 0px 0px;
+            }
+
+            .followedContainer{
+                height: 36px;
+                width: 208px;
+                margin: 16px 0px 0px;
+                display: flex;
+                justify-content: space-between;
+                .messageBtn{
+                    width: 165px;
+                }
+                .unFollowBtn{
+                    color: var(--black);
+                    border: 1px solid rgba(22, 24, 35, 0.12);
+                    border-radius: 4px;
+                    position: relative;
+                    .tooltiptext {
+                        visibility: hidden;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        min-width: 50px;
+                        background-color: rgba(84, 84, 84, 0.92);
+                        color: rgb(255, 255, 255);
+                        text-align: center;
+                        border-radius: 6px;
+                        padding: 5px 10px;
+                        
+                        /* Position the tooltip */
+                        position: absolute;
+                        top: 120%;
+                        left: -65%;
+                        z-index: 1;
+                        
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            right: 40%;
+                            top: -45%;
+                            border-width: 8px 8px;
+                            border-style: solid;
+                            border-color: transparent transparent rgba(84, 84, 84, 0.92) transparent;
+                            cursor: alias;
+                        }
+                       
+                    }
+            
+                    .tooltiptextMsg{
+                        left: -100% ;
+                    }
+                    &:hover{
+                        background-color: rgba(22, 24, 35, 0.05);
+                        .tooltiptext {
+                            visibility: visible;
+                          }
+                    }
+                }
+            }
+
+
+            .editProfileBtn{
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 4px;
+                color: rgb(22, 24, 35);
+                border-color: rgba(22, 24, 35, 0.12);
+                background-color: rgb(255, 255, 255);
+                width: 130px;
+                font-weight: 600;
+                font-family: SofiaPro, PingFangSC, sans-serif;
+                position: relative;
+                -webkit-box-pack: center;
+                justify-content: center;
+                user-select: none;
+                cursor: pointer;
+                .editProfileIcon{
+                    margin-right: 6px;
+                }
+            }
+        }
+        
+        
+    }
+
+
+    .userCountInfosContainer{
+        .userCountInfos{
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            margin-top: 22px;
+            color: rgba(18, 18, 18, 0.75);
+            .item{
+                margin-right: 20px;
+
+                .value{
+
+                }
+
+                .label{
+                    color: rgba(22, 24, 35, 0.75);
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    display: inline-block;
+                    margin-left: 6px;
+                }
+            }
+        }
+        .userBio{
+            text-align: left;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            white-space: pre-line;
+            margin-top: 10px;
+        }
+    }
+
+    .shareBtnContainer{
+        position: absolute;
+        top: 11px;
+        cursor: pointer;
+        right: 52px;
+        .shareBtn{
+            width: 28px;
+            height: 28px;
+        }
+        .popUpShareItemsList{
+            visibility: hidden;
+            transition: visibility 0.5s ease-out 0.3s;  
+            -moz-transition: visibility 0.5s ease-out 0.3s;
+            -webkit-transition: visibility 0.5s ease-out 0.3s;
+            -o-transition: visibility 0.5s ease-out 0.3s;  
+            &::before{
+                visibility: hidden;
+                content: "";
+                position: absolute;
+                right: -10px;
+                top: 20px;
+                border-width: 16px 20px;
+                border-style: solid;
+                border-color: transparent transparent var(--white) transparent;
+                -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,.5));
+                filter: drop-shadow(0px 1px 1px rgba(0,0,0,.5));
+                cursor: pointer;
+                transition: all 0.5s ease-out 0.3s;  
+                -moz-transition: all 0.5s ease-out 0.3s;
+                -webkit-transition: all 0.5s ease-out 0.3s;
+                -o-transition: all 0.5s ease-out 0.3s;  
+            }  
+        }
+        &:hover{
+            .popUpShareItemsList{
+                visibility: visible;
+                &::before{
+                    visibility: visible;
+
+                }
+                
+           } 
+       
+   
+       }
+       
+    }
+
+    .moreActionsContainer{
+        position: absolute;
+        top: 11px;
+        cursor: pointer;
+        right: 12px;
+    
+        .moreActionsBtn{
+            width: 28px;
+            height: 28px;
+        }
+        .popUpMoreActionsList{
+            visibility: hidden;
+            transition: visibility 0.5s ease-out 0.3s;  
+            -moz-transition: visibility 0.5s ease-out 0.3s;
+            -webkit-transition: visibility 0.5s ease-out 0.3s;
+            -o-transition: visibility 0.5s ease-out 0.3s;
+            &::before{
+                visibility: hidden;
+                content: "";
+                position: absolute;
+                right: -10px;
+                top: 20px;
+                border-width: 16px 20px;
+                border-style: solid;
+                border-color: transparent transparent var(--white) transparent;
+                -webkit-filter: drop-shadow(0px 1px 1px rgba(0,0,0,.5));
+                filter: drop-shadow(0px 1px 1px rgba(0,0,0,.5));
+                cursor: pointer;
+                transition: all 0.5s ease-out 0.3s;  
+                 -moz-transition: all 0.5s ease-out 0.3s;
+                 -webkit-transition: all 0.5s ease-out 0.3s;
+                 -o-transition: all 0.5s ease-out 0.3s;                         
+            } 
+            
+        } 
+        &:hover{
+            .popUpMoreActionsList{
+                visibility: visible;
+                &::before{
+                    visibility: visible;
+
+                }
+               
+            }
+   
+       }
+       
+    }
+
+    .modalWrapper{
+        z-index: 100;
+        width: 100vw;
+        height: 100%;
+        position: fixed;
+        inset: 0px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        overflow: hidden;
+    }
+}

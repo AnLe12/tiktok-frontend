@@ -1,0 +1,153 @@
+.wrapper {
+    width: 348px;
+    padding: 20px 0 26px 8px;
+    margin-top: var(--default-layout-header-height);
+    .frameContainer,
+    .userContainer,
+    .discoverContainer,
+    .footerContainer{
+      padding: 20px 8px 24px 8px;
+      position: relative;
+  
+      &::before{
+        content: "";
+        position: absolute;
+        height: 1px;
+        left: 8px;
+        right: 8px;
+        background: rgba(22, 24, 35, .12);
+        -webkit-transform: scaleY(.5);
+        -moz-transform: scaleY(.5);
+        -ms-transform: scaleY(.5);
+        transform: scaleY(.5);
+        top: 0;
+        }
+  
+        .header{
+          margin-bottom: 8px;
+          font-weight: 600;
+          font-size: 1.4rem;
+          line-height: 2.0rem;
+          color:rgba(22, 24, 35, .75);
+        }
+        
+    }
+
+    .navContainer{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8px;
+      .navBtn{
+        width: 100%;
+        height: 48px;
+        align-items: left;
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        justify-content: left;
+        margin-left: 0px;
+        padding: 24px 8px;
+        .navBtn-icon{
+          font-size: 2.3rem;
+          transform: translateY(-10%);
+        }
+      }
+    }
+
+    .frameContainer{
+      .text{
+        font-size: 1.6rem;
+        color:rgba(22, 24, 35, .5);
+        line-height: 2.2rem;
+      }
+      .logInBtn{
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+
+    .userContainer{
+      width: 100%;
+
+      .userList{
+        width: 100%;
+      }
+
+      .seeAllBtn{
+        margin-top: 8px;
+        margin-left: 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 2.0rem;
+        color: var(--primary);
+        min-width: 0;
+        &:hover{
+          background-color: transparent;
+        }
+      }
+    }
+
+    .discoverContainer{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px 8px 8px;
+      
+    }
+  
+}
+@media screen and (max-width: 1071px) {
+  .wrapper {
+      padding: 20px 8px 0 16px;
+      flex:0 0 68px !important;
+      width: 68px;
+      border-right: 1px solid rgba(22, 24, 35, 0.12);
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  .navContainer{
+    text-align: center;
+  }
+  .navBtn{
+    min-width: 50px !important;
+    max-width: 85% !important;
+    justify-content: right !important;
+    position: relative;
+    background-color: transparent;
+    transform: translateX(-15%);
+    .navBtn-icon{
+      font-size: 2.7rem !important;
+      transform: translateX(-5%) !important;
+      
+    }
+
+    
+    .navBtnLabel{
+      display: none;
+     
+    }
+    &:hover{
+      .navBtnLabel {
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: 135%;
+        z-index: 1;
+        font-size: 1.4rem;
+        font-weight: 600;
+        min-width: 50px;
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 10px;
+        }
+  }
+  }
+  .frameContainer,
+  .userContainer,
+  .discoverContainer,
+  .footerContainer{
+    visibility: hidden;
+  }
+}
+
+  

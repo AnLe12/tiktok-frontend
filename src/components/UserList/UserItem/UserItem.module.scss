@@ -1,0 +1,185 @@
+.userItemBtn{
+    
+    .userItem{   
+        &:hover {
+            background-color: rgba(22, 24, 35, .03);
+        }
+        display: flex;
+        flex-direction: row;
+        border-radius: 4px;
+        justify-content: left !important;
+        width: 100%;
+        padding: 8px;
+        position: relative;
+        .userAva{
+            width: 32px;
+            height: 32px;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            margin-right: 12px;
+            .userImg{
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                
+                    }
+        }
+
+        .userInfo{
+            height: 32px;
+            max-width: 250px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: left;
+
+
+            .userTitleContainer{
+                color: rgb(22, 24, 35);
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                margin-top: -2px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                
+
+                .userTitle{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    height: 20px;
+                }
+
+                .userStar{
+                    height: 16px;
+                    width: 16px;
+                    color: rgb(32, 213, 236);
+                    align-items: center;
+                    transform: translateY(15%);
+                    margin-left: 8px;
+                }
+            }
+
+            .userDesc{
+                color: rgba(22, 24, 35, 0.75);
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                float: bottom;
+            
+            }
+
+        }
+    }
+}
+
+
+
+.userProfile{
+    display: none;
+    position: absolute;
+    width: 320px;
+    box-sizing: border-box;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
+    border-radius: 8px;
+    z-index: 1;
+
+    &::before{
+        content:"";
+        position: absolute;
+        background-color: transparent;
+        display: block;
+        height: 20px;
+        width: 100%;
+        left: 0%;
+        top: -10%;
+    }
+
+    .headerContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .userAva{
+            width: 44px;
+            height: 44px;
+            &:hover{
+                background-color: white;
+            }
+        }
+        .followedBtn{
+            padding: 4px 16px;
+            color: rgb(22, 24, 35);
+            border: 1px solid rgba(22, 24, 35, 0.12);
+            min-height: 28px;
+            font-weight: 600;
+            font-family: ProximaNova, PingFangSC, sans-serif;
+        }
+    }
+
+    .userInfo{
+        height:fit-content;
+        .userTitleContainer{
+            justify-content: left;
+            display: flex;
+            flex-direction: row;
+            .userTitle{
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+        .userStar{
+            height: 16px;
+            width: 16px;
+            color: rgb(32, 213, 236);
+            align-items: center;
+            transform: translateY(15%);
+            margin-left: 8px;
+        }
+        .userDesc{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: rgb(22, 24, 35);
+        }
+    }
+
+    .userCount{
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+        display: inline-block;
+        margin-top: 8px;
+        
+        .userStatsText, .userStatsDesc{
+            margin-right: 6px;
+        }
+        .userStatsText{
+            font-weight: 700;
+        }
+    }
+    
+}
+
+
+.userItemContainer{
+    &:hover{
+        .userProfile{
+            display: block;
+        }
+
+    }
+}
+

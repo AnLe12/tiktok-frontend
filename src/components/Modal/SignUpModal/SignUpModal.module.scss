@@ -1,0 +1,284 @@
+.signUpWrapper{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 48px;
+    justify-content: space-around;
+    height: 100%;
+
+    .signUpContainer{
+        width: 375px;
+        margin: auto;
+        padding: unset;       
+        flex:  1 1 0%;
+        overflow: auto;
+        .title{
+            color: rgb(22, 24, 35);
+            font-family: var(--font-family);
+            font-size: 32px;
+            margin: 16px auto;
+            font-weight: bold;
+            text-align: center;
+            overflow-wrap: break-word;
+        }
+        
+        .formGroup{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            ~ .formGroup{
+                margin-top: 8px;
+            }
+
+            .birthdayContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;                
+                .monthListBox,
+                .dayListBox,
+                .yearListBox
+                {
+                    background: rgba(22, 24, 35, 0.06);
+                    border-radius: 4px;
+                    position: relative;
+                    cursor: pointer;
+
+                    .selectLabel{
+                        width: 120px;
+                        height: 44px;
+                        padding: 0px 12px;
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        color: rgb(22, 24, 35);
+                        font-size: 16px;
+                    }
+                    .optionListContainer{
+                        left: 0px;
+                        right: 0px;
+                        width: 120px;
+                        max-height: 320px;
+                        overflow: auto;
+                        position: absolute;
+                        background: rgb(255, 255, 255);
+                        border-radius: 4px;
+                        box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+                        top: 50px;
+                        z-index: 12;
+                        
+                        transition: display 0.3s ease 0s;
+                        
+                         .optionItem{
+                            height: 34px;
+                            overflow: auto;
+                            font-size: 16px;
+                            padding: 0px 12px;
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: space-between;
+                            -webkit-box-align: center;
+                            align-items: center;
+                            color: rgb(22, 24, 35);
+                            background: unset;      
+                            &:hover{
+                                background: rgba(22, 24, 35, 0.03);
+                            }                   
+                        }
+                    }
+
+                }
+            }
+            
+
+            .inputContainer{
+                border-radius: 2px;
+                background-color: rgba(22, 24, 35, 0.06);
+                border: 1px solid rgba(22, 24, 35, 0.12);
+                padding-inline-start: 12px;
+                color: rgb(22, 24, 35);
+                line-height: 100%;
+                outline: none;
+                font-size: 16px;
+                height: 44px;
+                caret-color: rgb(254, 44, 85);
+                width: 100%;
+                padding-inline-end: unset;                        
+                font-family: var(--font-family);
+
+                &::placeholder{
+                    font-weight: 400;
+                    color:rgba(22, 24, 35, .5);
+                    font-size: 16px;
+                } 
+            }
+
+            .sendCodeWrapper{
+                position: absolute;
+                right: 0px;
+                height: 44px;
+                // padding-inline-end: 16px;
+            .sendCodeBtn{
+                    color: rgb(22, 24, 35);
+                    font-family: var(--font-family);
+                    font-weight: 600;
+                    margin: 0px;
+                    background-color: rgba(22, 24, 35, 0.06);
+                    border-color: rgba(22, 24, 35, 0.12);
+                    border-width: 1.5px;
+                    border-style: solid;
+                    border-radius: 0px 4px 4px 0px;
+                    border-inline-start-width: 1.5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    padding: 0px 16px;
+                    height: 42px;
+                    flex-shrink: 0;
+                    box-sizing: content-box;
+                }
+            }
+            .iconContainer{
+                right: 0px;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                position: absolute;
+                top: 0%;
+                height: 44px;
+                padding-inline-end: 16px;
+                .warningIcon{
+                    color: red;
+                    transform: translateY(10%);
+                    
+                }
+                .showIconBtnContainer{
+                    height: 44px;
+                    width: 30px;
+                    position:relative;
+                    cursor: pointer;
+
+        
+                    .showIconBtn{
+                        line-height: 0;
+                        margin-inline-start: 16px;
+                        font-size: 20px;
+                        position: absolute;
+                        top: calc(50% - 10px);
+                        left: calc(50% - 25px);
+                    }
+                }
+            }
+
+            .descriptionTitleContainer{
+                .descriptionTitle{
+                    color: rgb(22, 24, 35);
+                    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+                    font-weight: 600;
+                    margin: 4px 0px
+                }
+                .textContainer{
+                    font-size: 12px;
+                    line-height: 15px;
+                    margin: 4px 0px;
+                    color: rgba(22, 24, 35, 0.5);
+                    display: flex;
+                    .checkIcon{
+                        margin-inline-end: 4px;
+                    }
+
+                }
+
+                .active{
+                    color: rgb(11, 224, 155);
+                }
+                .warning{
+                    color: red;
+                }
+            }
+            
+            .warning{
+                border-color: red;
+            }   
+            
+        }
+
+        .textWarningContainer{
+            font-size: 12px;
+            line-height: 15px;
+            margin: 4px 0px;
+            color: red;
+            display: flex;
+            .checkIcon{
+                margin-inline-end: 4px;
+            }
+
+        }
+
+        .formLabel{
+            color: rgb(22, 24, 35);
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            margin-top: 8px;
+            + .formGroup{
+                margin-top: 0px;
+            }
+        }
+        .signUpBtn{
+            border-radius: 4px;
+            border: none;
+            color: rgb(255, 255, 255);
+            background-color: rgb(254, 44, 85);
+            min-height: 46px;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 700;
+            user-select: none;
+            cursor: pointer;
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 21px;
+
+            &:disabled{
+                border: none;
+                color: rgba(22, 24, 35, 0.34);
+                background-color: rgba(22, 24, 35, 0.06);
+                pointer-events: none;
+            }
+        }
+    }
+
+    .policyConfirmTips{
+        width: 100%;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background: rgb(255, 255, 255);
+        border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+        border-top-color: rgba(22, 24, 35, 0.12);
+        border-right-color: rgba(22, 24, 35, 0.12);
+        border-left-color: rgba(22, 24, 35, 0.12);
+        padding: 16px 30px;
+        margin-bottom: unset;
+        
+        p{
+            color: rgba(22, 24, 35, 0.5);
+            font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+            font-size: 12px;
+            line-height: 15px;
+            width: 375px;
+            text-align: center;
+        }
+        .tiktokLink{
+            color: rgb(22, 24, 35);
+        }
+    }
+
+
+    
+}

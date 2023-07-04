@@ -1,0 +1,253 @@
+.videoWrapper{
+    flex: 1 0 600px;
+    height: 100%;
+    max-width: 100%;
+    background: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    // padding: 0px 80px;
+    .outsideVideBackground{
+        background: 50%/cover no-repeat;
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+        height: 10%;
+        left: 50%;
+        opacity: .3;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: scale(11);
+        transform: scale(11);
+        width: 10%;
+    }
+    .playerWrapper{
+        background-color: rgba(22,24,35,.06);
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        .hidden{
+            visibility: hidden;
+        }
+        .video{
+            object-fit: contain;
+            right: 0%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        .videoControlContainer{
+            position: absolute;
+            top: 50px;
+            bottom: -85%;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 56.25vh;
+            width: calc(100% - 200px);
+            display: flex;
+            flex-direction: row;
+            font-size: 1.4rem;
+            align-items: center;
+            padding: 0 16px;
+            &:hover{
+                .timeProgressBar::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    background-color: var(--white);
+                    cursor: pointer;
+                }
+            }
+            .progressBarContainer{
+                position: relative;
+                width: 100%;
+                .progressBarLayer{
+                    position: absolute;
+                    left: 0;
+                    top: 9px;
+                    height: 5px;
+                    background-color:var(--white);
+                    
+                }
+                .timeProgressBar {
+                    width: 100%;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    height: 6px;
+                    background: rgba(86, 86, 86, 0.8);
+                    outline: none;
+                    -webkit-transition: 0.2s;
+                    transition: opacity 0.2s;
+                    cursor: pointer;             
+                }
+                .timeProgressBar::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                }
+                
+            }
+            .timer{
+                color: var(--white);
+                flex: 0 0 88px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-left: 4px;
+                text-align: right;
+            }  
+        }
+    }
+
+    
+    .voiceControlContainer{
+        position: absolute;
+        display: flex;
+        bottom: 65px;
+        right: -25px;
+        flex-direction: row;
+        z-index: 2000;
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        &:hover{
+            .voiceBarContainer{
+                visibility: visible;
+            }
+        }
+        .voiceBtn{
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+            width: 42px;
+            height: 42px;
+            background-color: rgba(84,84,84,.5);           
+            text-align: center;
+            
+            
+            .voiceIcon{
+                width: 24px; 
+                height: 24px;
+                color: var(--white)
+            }
+        }
+        .voiceBarContainer{
+            transform: translateY(15%) translateX(8%);
+            visibility: hidden;
+            .voiceBarLayer{
+                position: absolute;
+                left: 0;
+                top: 11px;
+                height: 5px;
+                background-color:var(--white);
+                border-radius: 4px;
+            }
+            .voiceProgressBar{
+                -webkit-appearance: none;
+                appearance: none;
+                height: 6px;
+                width: 100px;
+                border-radius: 4px;
+                background: rgba(84,84,84,.5);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .voiceProgressBar::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background-color: var(--white);
+                cursor: pointer;
+            }
+        }
+        
+    }
+
+    .btnWrapper{
+        position: absolute;
+        top: 28px;
+        left: 28px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        background-color: rgba(84,84,84,.5);            text-align: center;
+        transform: scale(1.7);    
+        .closeBtn{
+            width: 13px;
+            height: 13px;
+            transform: translateY(15%) translateX(5%);
+            color: var(--white);
+        }
+    }
+
+    .prevBtn {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(84, 84, 84, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        width: 40px;
+        height: 40px;
+        top: calc(50% - 48px);
+        margin-top: -24px;
+        right: 20px;
+        span {
+            display: flex;
+            .prevIcon {
+                width: 24px;
+                height: 24px;
+                color: var(--white);
+            }
+        }
+    }
+
+    .nextBtn {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(84, 84, 84, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        width: 40px;
+        height: 40px;
+        top: calc(50% + 8px);
+        margin-top: -24px;
+        right: 20px;
+        span {
+            display: flex;
+            .nextIcon {
+                width: 24px;
+                height: 24px;
+                color: var(--white);
+            }
+        }
+    }
+
+    .playBtn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        background-color: transparent;
+        .playIcon {
+            width: 100px;
+            height: 100px;
+            color: var(--white);
+        }
+    }
+}
