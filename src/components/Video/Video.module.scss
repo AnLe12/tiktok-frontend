@@ -146,12 +146,12 @@
                 // min-width: calc(450px + (100vw - 768px) / 1152 * 200);
             }
             .vertical {
-                height:calc(420px + ((100vw - 768px) / 1152) * 200);
-                width: 300px;
+                height:calc(390px + ((100vw - 768px) / 1152) * 200);
+                width: 275px;
             }
             .horizontal {
-                height: calc(420px + ((100vw - 768px) / 1152) * 200);
-                width: 500px;
+                height: 325px;
+                width: calc(450px + ((100vw - 768px) / 1152) * 200);
             }
             
             .video {
